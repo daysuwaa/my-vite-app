@@ -19,6 +19,7 @@ import Scheduletable from "./components/Schedule/Schedule-table";
 import Schedulepayments from "./components/Schedule/Schedule_payments";
 import Beneficiarytable from "./components/Beneficiary/Beneficiary_Table";
 import BeneficiaryPayment from "./components/Beneficiary/Beneficiarypayment";
+import Scheduledetails from "./components/Schedule/Scheduledetails";
 
 function App() {
   return (
@@ -41,6 +42,7 @@ function App() {
             <Route path="/analytics" element={<Analytics />} />
             <Route path="/settings" element={<Settings />} />
             <Route path="/schedules/table" element={<Scheduletable />} />
+            <Route path="/schedules/details" element={<Scheduledetails />} />
             <Route path="/payment/details" element={<Details />} />
             <Route path="/schedules/payments" element={<Schedulepayments />} />
             <Route path="/beneficiaries/table" element={<Beneficiarytable />} />
