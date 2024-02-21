@@ -61,7 +61,7 @@ const Sidebar = () => {
         </p>
       </div>
 
-      <div className="hidden md:block w-[250px] h-[0.4px] bg-gray-400"></div>
+      <hr className="hidden md:block "></hr>
 
       <div className="pt-7">
         {/* renndered three links as shwon above */}

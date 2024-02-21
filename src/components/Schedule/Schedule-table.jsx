@@ -15,6 +15,7 @@ const ScheduleTable = () => {
   const [isAddScheduleModalOpen, setIsAddScheduleModalOpen] = useState(false);
   const openAddScheduleModal = () => setIsAddScheduleModalOpen(true);
   const closeAddScheduleModal = () => setIsAddScheduleModalOpen(false);
+  const [isOpen, setIsOpen] = useState(false);
 
   const columns = [
     {
@@ -106,7 +107,7 @@ const ScheduleTable = () => {
           <input
             type="text"
             placeholder="Search by Schedule Id"
-            id="scsearch"
+            id="ascsearch"
             className="font-light w-[320px]  outline-none text-[#718096] text-[14px] ml-1.5 bg-[#f6f6f6]"
           />
         </div>
@@ -133,7 +134,6 @@ const ScheduleTable = () => {
         </div>
       </div>
       {/* xs screen */}
-
       <div className="block md:block lg:hidden ml-auto pt-5 md:mt-0  px-5  ">
         <button
           className="mr-2 mb-3 border border-[#3B2773] text-[#1C065A] px-3 h-[32px]  text-sm rounded bg-white  text-center  "
@@ -149,7 +149,6 @@ const ScheduleTable = () => {
           Add New Schedule
         </button>
       </div>
-
       <hr className="bg-[#CBD5E0] w-full h-0.3 my-5" />
       <div
         style={{ border: "1px solid var(--Color-Gray-Gray-40, #CBD5E0)" }}
@@ -157,7 +156,6 @@ const ScheduleTable = () => {
       >
         <DataTable columns={columns} data={data} className="" />
       </div>
-
       <GetScheduleModal
         isOpen={isGetScheduleOpen}
         modalTitle={"Get Schedule Template"}
@@ -166,8 +164,8 @@ const ScheduleTable = () => {
       <AddScheduleModal
         isOpen={isAddScheduleModalOpen}
         modalTitle={"Add New Schedule"}
-        namee={"Schedule Name"}
         handleClose={closeAddScheduleModal}
+        linkroute="/schedules" // Pass the route to AddScheduleModal
       />
     </div>
   );

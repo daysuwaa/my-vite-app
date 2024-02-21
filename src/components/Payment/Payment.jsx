@@ -7,7 +7,6 @@ import payments from "/src/assets/FiCreditCard.svg";
 import calendar from "/src/assets/FiCalendar.svg";
 import wallet from "/src/assets/IoWalletOutline.svg";
 import winfo from "/src/assets/CkInfoOutline-2.svg";
-import info from "/src/assets/CkInfoOutline.svg";
 import Tooltip from "@mui/material/Tooltip";
 import Navbarr from "../Layout/Navbar";
 import Filter from "./Filter";
@@ -93,10 +92,7 @@ const Payment = () => {
   const [activeTab, setActiveTab] = useState("outflow");
 
   return (
-    <div
-      style={{ backgroundColor: "#F6F6F6" }}
-      className="w-full h-full overflow-auto"
-    >
+    <div className="w-full h-full overflow-auto bg-[#F6F6F6]">
       {/* navbar */}
       <Navbarr title="Payment" />
 
@@ -113,14 +109,7 @@ const Payment = () => {
           winfo
         )}
 
-        {styling(
-          "var(--Surface-Primary, #FFF)",
-          "All Beneficiaries",
-          wallet,
-          money3,
-          "#4A5568",
-          info
-        )}
+        {styling("#834CFC", "All Beneficiaries", wallet, money3, "#FFF", winfo)}
       </div>
       {/* end of frames */}
 

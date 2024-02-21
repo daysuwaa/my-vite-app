@@ -36,8 +36,8 @@ const Details = () => {
               <g id="FiChevronLeft">
                 <path
                   id="Vector (Stroke)"
-                  fill-rule="evenodd"
-                  clip-rule="evenodd"
+                  fillRule="evenodd"
+                  clipRule="evenodd"
                   d="M9.16244 3.08748C9.39024 3.31529 9.39024 3.68463 9.16244 3.91244L6.07492 6.99996L9.16244 10.0875C9.39024 10.3153 9.39024 10.6846 9.16244 10.9124C8.93463 11.1402 8.56529 11.1402 8.33748 10.9124L4.83748 7.41244C4.60967 7.18463 4.60967 6.81529 4.83748 6.58748L8.33748 3.08748C8.56529 2.85967 8.93463 2.85967 9.16244 3.08748Z"
                   fill="#1C065A"
                 />
@@ -227,7 +227,7 @@ const Details = () => {
                 fill="none"
                 xmlns="http://www.w3.org/2000/svg"
               >
-                <g id="user 1" clip-path="url(#clip0_511_22106)">
+                <g id="user 1" clipPpath="url(#clip0_511_22106)">
                   <g id="Group">
                     <g id="Group_2">
                       <g id="Group_3">
@@ -295,8 +295,8 @@ const Details = () => {
                 <g id="FiChevronRight">
                   <path
                     id="Vector (Stroke)"
-                    fill-rule="evenodd"
-                    clip-rule="evenodd"
+                    fillRule="evenodd"
+                    clipRule="evenodd"
                     d="M4.14645 2.64645C4.34171 2.45118 4.65829 2.45118 4.85355 2.64645L7.85355 5.64645C8.04882 5.84171 8.04882 6.15829 7.85355 6.35355L4.85355 9.35355C4.65829 9.54882 4.34171 9.54882 4.14645 9.35355C3.95118 9.15829 3.95118 8.84171 4.14645 8.64645L6.79289 6L4.14645 3.35355C3.95118 3.15829 3.95118 2.84171 4.14645 2.64645Z"
                     fill="#4A5568"
                   />

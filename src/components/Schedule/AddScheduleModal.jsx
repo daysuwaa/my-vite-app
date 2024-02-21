@@ -3,7 +3,7 @@ import Modal from "react-modal";
 import close from "../../assets/IoCloseOutline.svg";
 import Draganddrop from "./Draganddrop";
 
-const AddScheduleModal = ({ isOpen, handleClose, modalTitle }) => {
+const AddScheduleModal = ({ isOpen, handleClose, modalTitle, linkroute }) => {
   const [scheduleename, setScheduleename] = useState("");
   return (
     <Modal
@@ -23,7 +23,7 @@ const AddScheduleModal = ({ isOpen, handleClose, modalTitle }) => {
             <img src={close} alt="close" className="mb-2" />
           </button>
         </div>
-        <hr className=" mx-auto h-[2px] border-b bg-[#2a2d7e]"></hr>
+        <hr className=" border-b bg-[#2a2d7e]"></hr>
         <div className="my-6">
           <form>
             <label
@@ -44,7 +44,7 @@ const AddScheduleModal = ({ isOpen, handleClose, modalTitle }) => {
             </div>
           </form>
         </div>
-        <Draganddrop />
+        <Draganddrop routee={linkroute} />
       </div>
     </Modal>
   );

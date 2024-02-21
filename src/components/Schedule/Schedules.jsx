@@ -56,6 +56,8 @@ const Schedules = () => {
           handleClose={closeAddScheduleModal}
           scheduleename={scheduleename}
           setscheduleename={setScheduleename}
+          linkroute="/schedules/table"
+          // Pass the route to AddScheduleModal
         />
       </div>
     </div>

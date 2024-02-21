@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import Navbar from "../Layout/Navbar";
 import toast, { Toaster } from "react-hot-toast";
-import GetScheduleModal from "./Delete_modal";
+import DeleteModal from "./Delete_modal";
 import { Link } from "react-router-dom";
 
 const Schedule_payments = () => {
@@ -203,17 +203,14 @@ const Schedule_payments = () => {
             </div>
             <Toaster />
 
-            <div
-              className="mx-3 h-[2px] border-b my-7 "
-              style={{ background: "var(--Color-Gray-Gray-40, #CBD5E0)" }}
-            ></div>
+            <hr className="mx-3 h-[2px] border-b my-7 bg-[#CBD5E0] "></hr>
             <div className="mx-3  ">
               <p className="text-[#1C065A] text-[10px] font-[500]">
                 SCHEDULE DETAILS
               </p>
               <div className="flex mt-3">
                 <p className="text-[#718096] text-[14px] font-light">
-                  Schedule ID
+                  Day Payable
                 </p>
                 <p className="text-[#718096] text-[14px] font-light ml-auto mr-[4.8rem]">
                   Created On
@@ -256,7 +253,7 @@ const Schedule_payments = () => {
               </h1>
 
               <Link
-                to="*"
+                to="/schedules/details"
                 className="underline ml-auto text-[12px] text-[#4A5568]"
               >
                 View all
@@ -375,10 +372,11 @@ const Schedule_payments = () => {
         "650,000.00",
         "12th August, 2023."
       )}
-      <GetScheduleModal
+      <DeleteModal
         isOpen={isDeleteScheduleOpen}
         modalTitle={"Delete Schedule?"}
         handleClose={closeDeleteSchedule}
+        route="/schedules/table"
       />
     </div>
   );
