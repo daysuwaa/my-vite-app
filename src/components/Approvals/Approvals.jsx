@@ -1,6 +1,6 @@
 import React from "react";
 import Navbar from "../Layout/Navbar";
-import Approval from "./Approval";
+import Approval from "./ApprovalTable";
 
 const Approvals = () => {
   return (
@@ -76,10 +76,7 @@ const Approvals = () => {
           </p>
         </div>
       </div>
-      <div
-        className="w-full border-b mt-4"
-        style={{ background: "var(--Color-Gray-Gray-40, #CBD5E0)" }}
-      ></div>
+      <hr className=" border-b my-4 bg-[#CBD5E0]"></hr>
       {/* imported the file approval */}
       <Approval />
       {/* end of code */}

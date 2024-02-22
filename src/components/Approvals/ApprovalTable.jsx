@@ -36,7 +36,7 @@ const Approvals = () => {
     {
       name: <div className="font-bold text-[#4A5568]">PAYOUTS</div>,
       selector: (row) => (
-        <div className=" font-bold text-[#1C065A]"> {row.payout}</div>
+        <div className=" font-semibold text-[#1C065A]"> {row.payout}</div>
       ),
     },
     {

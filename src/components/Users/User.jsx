@@ -70,7 +70,7 @@ const Users = () => {
     {
       name: <div className="font-bold text-[#4A5568]">ACTIONS</div>,
       selector: (row) => (
-        <div className="flex">
+        <div className="flex ">
           <div
             style={{
               border: "1px solid #3B2773",
@@ -105,7 +105,7 @@ const Users = () => {
                   ? ["#FF5655"]
                   : "none",
 
-              padding: "5px 16px 5px 15px",
+              padding: "7px 4px",
               justifyContent: "center",
               borderRadius: "4px",
               textAlign: "center",
@@ -119,7 +119,7 @@ const Users = () => {
                 openReactivateModal(); // Call the reactivate function
               }
             }}
-            className="cursor-pointer"
+            className="cursor-pointer "
           >
             {row.status2}
           </div>

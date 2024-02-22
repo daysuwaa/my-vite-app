@@ -126,7 +126,10 @@ const Users = () => {
               </select>
             </div>
           </form>
-          <button className="bg-[#3B2774] h-[40px] w-[123px] rounded text-center text-white text-[16px] mt-9">
+          <button
+            className="bg-[#3B2774] h-[40px] w-[123px] rounded text-center text-white text-[16px] mt-9"
+            onClick={handleClose}
+          >
             Create User
           </button>
         </div>
@@ -149,7 +152,7 @@ const Users = () => {
 
       <div className="flex ml-auto justify-end items-center mx-2 px-[12px] mt-8 pb-5">
         <button
-          className="bg-[#3B2774] h-[32px] w-[123px] rounded text-center text-white text-sm gap-8"
+          className="bg-[#3B2774] h-[32px] w-[123px] font-[600] rounded text-center text-white text-sm gap-8"
           onClick={openModal}
         >
           Add New User

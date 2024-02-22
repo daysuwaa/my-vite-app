@@ -112,7 +112,10 @@ const EditUserModal = ({ isEditModalOpen, closeEditModal }) => {
                 </select>
               </div>
             </form>
-            <button className="bg-[#3B2774] h-[40px] w-[123px] rounded text-center text-white text-[16px] mt-9">
+            <button
+              className="bg-[#3B2774] h-[40px] w-[123px] rounded text-center text-white text-[16px] mt-9"
+              onClick={closeEditModal}
+            >
               Edit User
             </button>
           </div>
