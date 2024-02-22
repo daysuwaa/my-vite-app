@@ -15,7 +15,6 @@ const ScheduleTable = () => {
   const [isAddScheduleModalOpen, setIsAddScheduleModalOpen] = useState(false);
   const openAddScheduleModal = () => setIsAddScheduleModalOpen(true);
   const closeAddScheduleModal = () => setIsAddScheduleModalOpen(false);
-  const [isOpen, setIsOpen] = useState(false);
 
   const columns = [
     {
@@ -164,8 +163,9 @@ const ScheduleTable = () => {
       <AddScheduleModal
         isOpen={isAddScheduleModalOpen}
         modalTitle={"Add New Schedule"}
+        namee={"Schedule Name"}
         handleClose={closeAddScheduleModal}
-        linkroute="/schedules" // Pass the route to AddScheduleModal
+        linkroute="/schedules"
       />
     </div>
   );

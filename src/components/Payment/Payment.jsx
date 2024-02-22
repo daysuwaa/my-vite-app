@@ -97,7 +97,7 @@ const Payment = () => {
       <Navbarr title="Payment" />
 
       {/* framesssss */}
-      <div className="grid grid-cols-1 md:grid-cols-3 mx-5 md:mx-7 gap-4">
+      <div className="grid grid-cols-1 lg:grid-cols-3 mx-5 md:mx-7 gap-4">
         {styling("#22085C", "Total Payments", payments, money1, "#FFF", winfo)}
 
         {styling(

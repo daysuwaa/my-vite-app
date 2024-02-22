@@ -130,7 +130,7 @@ const Analytics = () => {
           </div>
         </div>
       </div>
-      <div className="grid grid-cols-1 mt-6  lg:grid-cols-3 md:grid-cols-1 mx-5 md:mx-7 gap-4 ">
+      <div className="grid grid-cols-1 mt-6  xl:grid-cols-3 md:grid-cols-1 mx-5 md:mx-7 gap-4 ">
         <div className="w-full">
           {graphs(
             "Total Payouts",

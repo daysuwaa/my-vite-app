@@ -98,7 +98,7 @@ const Dashboard = () => {
       <Navbar title="Dashboard" />
       {/* end of nav */}
       {/* framesssss */}
-      <div className="grid grid-cols-1 md:grid-cols-3 mx-5 md:mx-7 pb-7 gap-4">
+      <div className="grid grid-cols-1 lg:grid-cols-3 mx-5 md:mx-7 pb-7 gap-4">
         {styling(
           "#22085C",
           "Total Payments",

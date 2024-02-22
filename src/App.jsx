@@ -20,11 +20,13 @@ import Schedulepayments from "./components/Schedule/Schedule_payments";
 import Beneficiarytable from "./components/Beneficiary/Beneficiary_Table";
 import BeneficiaryPayment from "./components/Beneficiary/Beneficiarypayment";
 import Scheduledetails from "./components/Schedule/Scheduledetails";
+import Login from "./components/Layout/Login";
 
 function App() {
   return (
     <Router basename="/">
       {/* to make the side bar at the , yk ,side, lol */}
+
       <div className="app flex h-screen">
         <Sidebar />
         <div className="content max-h-full overflow-y-auto" style={{ flex: 1 }}>
@@ -33,6 +35,7 @@ function App() {
               path="/"
               element={<Navigate to="/dashboard" replace={true} />}
             />
+            <Route path="/login" element={<Login />} />
             <Route path="/dashboard" element={<Dashboard />} />
             <Route path="/payment" element={<Payment />} />
             <Route path="/schedules" element={<Schedules />} />
