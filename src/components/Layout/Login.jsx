@@ -39,7 +39,7 @@ const Login = () => {
             <div className="flex items-center border-2 w-[70%] rounded h-10 border-[#1C065A] focus-within:outline  outline-1 outline-[#1C065A] ">
               <MdOutlineMail className="text-[#1C065A] mx-2 h-6 w-6" />
               <input
-                className="font-normal outline-none text-[#718096] text-[16px] "
+                className="font-normal outline-none w-full text-[#718096] text-[16px] "
                 type="text"
                 id="loginemail"
                 placeholder="Email"
@@ -54,7 +54,7 @@ const Login = () => {
             <div className="flex items-center border-2 w-[70%] rounded h-10 border-[#1C065A] focus-within:outline  outline-1 outline-[#1C065A] ">
               <RiLockPasswordLine className="text-[#1C065A] mx-2 h-6 w-6" />
               <input
-                className="font-normal border-b  outline-none text-[#718096] text-[16px]"
+                className="font-normal border-b w-full  outline-none text-[#718096] text-[16px]"
                 type="password"
                 id="loginpassword"
                 placeholder="Password"
