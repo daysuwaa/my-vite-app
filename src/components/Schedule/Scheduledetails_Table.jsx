@@ -120,8 +120,8 @@ const Scheduledetails_Table = () => {
   ];
   return (
     <div className="pb-7">
-      <div className="md:flex pt-8">
-        <div className="px-[20px] h-10  mx-5 lg:mx-7 flex md:w-[320px] rounded border border-[#CBD5E0] focus-within:outline outline-2 outline-blue-600">
+      <div className="lg:flex pt-8">
+        <div className="px-[20px] h-10  mx-5 lg:mx-7 flex md:w-[490px] rounded border border-[#CBD5E0] focus-within:outline outline-2 outline-blue-600">
           <img src={search} alt="searchicon" className="w-[16px]  " />
           <input
             type="text"
@@ -130,14 +130,14 @@ const Scheduledetails_Table = () => {
             className="font-light w-[320px]  outline-none text-[#718096] text-[14px] ml-1.5 bg-[#f6f6f6]"
           />
         </div>
-        <div className="px-[20px] rounded border border-[#CBD5E0] h-10 items-center mx-5 mt-3 md:mx-5 sm:mt-3 md:mt-0 lg:mt-0 flex w-[100px] ">
+        <div className="px-[16px] w-[90px] rounded border border-[#CBD5E0] h-10 items-center mx-5 mt-3 md:mx-5 sm:mt-3 md:mt-3 lg:mt-0 flex  ">
           <img src={filter} alt="searchicon" className="w-[16px] " />
           <p className="font-light text-[#718096] text-[14px] ml-1.5">Filter</p>
         </div>
-        <div className="ml-auto ">
+        <div className=" flex-shrink-0 ml-auto">
           <button
             onClick={openDeleteModal}
-            className="  text-[#FF5655] h-[40px] text-[14px] mx-5 mt-3  md:mt-0  rounded px-4 border border-[#FF5655]  lg:mx-7  "
+            className="px-4 text-[#FF5655] h-[40px] mx-5 text-[14px] sm:mx-5 mt-3  md:mt-3 lg:mt-0  rounded  border border-[#FF5655] lg:mx-7  "
           >
             Delete Schedule
           </button>

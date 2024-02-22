@@ -106,7 +106,7 @@ const Scheduledetails = () => {
           <p className="text-[#1C065A] text-[10px] font-[500]">
             SCHEDULE DETAILS
           </p>
-          <div className="flex md:hiddenlg:grid-cols-5   text-[#718096] text-[12px] font-light gap-[3.5rem] pt-3">
+          <div className="flex  text-[#718096] text-[12px] font-light lg:gap-[1.5rem] xl:gap-[5.5rem] pt-3">
             <div className="border-r-[1px] pr-[3.5rem] ">
               <div>DAY PAYABLE</div>
               <div className="text-[#1C065A] text-[12px] font-[500] pt-1">
@@ -189,7 +189,7 @@ const Scheduledetails = () => {
         <Toaster />
 
         <hr className="mx-3 h-[2px] border-b my-7 bg-[#CBD5E0]"></hr>
-        <div className="mx-3 md:mx-7  ">
+        <div className="mx-3 md:mx-7   ">
           <p className="text-[#1C065A] text-[10px] font-[500]">
             SCHEDULE DETAILS
           </p>

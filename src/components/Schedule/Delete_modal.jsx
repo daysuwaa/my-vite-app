@@ -9,7 +9,7 @@ const Delete_modal = ({ isOpen, handleClose, modalTitle, route }) => {
       onRequestClose={handleClose}
       contentLabel={modalTitle}
       shouldCloseOnOverlayClick={false}
-      className="absolute rounded top-1/2 md:left-1/2 left-[43%] w-[90%] sm:w-[60%] md:w-[40%]  transform -translate-x-1/2 bg-white -translate-y-1/2 p-[2rem] m-[2rem]"
+      className="absolute rounded lg:top-1/3  top-1/2 md:left-1/2 left-[43%] w-[90%] sm:w-[60%] md:w-[60%]  transform -translate-x-1/2 bg-white -translate-y-1/2 p-[2rem] m-[2rem]"
       overlayClassName="fixed inset-0 bg-black bg-opacity-50"
     >
       <div className="flex items-center">
@@ -39,8 +39,8 @@ const Delete_modal = ({ isOpen, handleClose, modalTitle, route }) => {
       <hr className="h-[2px] border-b text-[#CBD5E0]" />
       <div className="mt-4 flex text-center item-center justify-center">
         <p className="text-[#4A5568] text-sm">
-          Are you sure you want to delete this schedule?
-          <p>This action cannot be reversed!</p>
+          Are you sure you want to delete this schedule? <br></br>This action
+          cannot be reversed!
         </p>
       </div>
       {/* Add delete button as Link */}
