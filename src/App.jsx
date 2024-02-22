@@ -27,7 +27,7 @@ function App() {
   return (
     <Router>
       <Routes>
-        <Route path="/login" element={<Login />} />
+        <Route path="/" element={<Login />} />
         <Route element={<WithSidebar />}>
           <Route path="/dashboard" element={<Dashboard />} />
           <Route path="/payment" element={<Payment />} />
@@ -87,8 +87,7 @@ function WithSidebar() {
     );
   }
 
-  // Render nothing if on the login page
-  return null;
+  // return null;
 }
 
 export default App;
