@@ -23,7 +23,6 @@ const Login = () => {
       toast.error("Password should be at least 6 characters long!");
     } else {
       // Navigate to dashboard if both email and password are valid
-      toast.error("login successful");
       navigate("/dashboard");
     }
   };
