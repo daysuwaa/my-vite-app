@@ -25,7 +25,7 @@ const Sidebar = () => {
       <Link to={link} className="grid">
         <div className=" items-center space-x-12 ">
           <div
-            className={`flex px-3 w-full md:w- [226px] h-[44px]  `}
+            className={`flex px-3 w-full md:w-[226px] h-[44px]  `}
             style={{
               borderRadius: isActive ? "4px" : "",
               border: isActive
@@ -40,7 +40,7 @@ const Sidebar = () => {
               className="w-[18px] h-[18px] mt-3 mx-auto"
             />
             <p
-              className={`flex-1 text-white tracking-wider text-sm leading-6 px-3  mt-2 hidden md:block ${
+              className={`flex-1 text-white tracking-wider text-sm leading-6 px-3  mt-2  md:block ${
                 isActive ? "font-bold" : "font-light"
               }`}
             >
@@ -53,8 +53,8 @@ const Sidebar = () => {
   };
 
   return (
-    <div className="h-full md:w-[250px] w-[70px] px-3 py-4 bg-[#1C065A]">
-      <div className="flex justify-center items-center space-x-2 py-6">
+    <div className="h-full md:w-[250px] w-[40%] px-3 py-4 bg-[#1C065A] hidden md:block">
+      <div className="flex justify-center items-center space-x-2 py-6 ">
         <img className="w-10 h-10 rounded-sm" src={chevron} alt="logo" />
         <p className="text-white font-semibold tracking-wider hidden md:block text-[16px] leading-[24px] ">
           Chevron Group
@@ -63,8 +63,7 @@ const Sidebar = () => {
 
       <hr className="hidden md:block "></hr>
 
-      <div className="pt-7">
-        {/* renndered three links as shwon above */}
+      <div className="pt-7 ">
         {renderLink("/dashboard", "Dashboard", dashboard)}
         {renderLink("/payment", "Payments", payments)}
         {renderLink("/schedules", "Schedules", schedules)}
@@ -74,7 +73,6 @@ const Sidebar = () => {
         {renderLink("/analytics", "Analytics", analytics)}
         {renderLink("/settings", "Settings", settings)}
       </div>
-      {/* {end of side bar} */}
     </div>
   );
 };
