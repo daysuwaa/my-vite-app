@@ -4,6 +4,7 @@ import {
   Route,
   Routes,
   useLocation,
+  Navigate,
 } from "react-router-dom";
 import Dashboard from "./components/Dashboard/Dashboard";
 import Payment from "./components/Payment/Payment";
@@ -27,7 +28,8 @@ function App() {
   return (
     <Router>
       <Routes>
-        <Route path="/" element={<Login />} />
+        <Route path="/" element={<Navigate to="/dashboard" replace={true} />} />
+        <Route path="/login" element={<Login />} />
         <Route element={<WithSidebar />}>
           <Route path="/dashboard" element={<Dashboard />} />
           <Route path="/payment" element={<Payment />} />
@@ -46,7 +48,7 @@ function App() {
             path="/beneficiaries/payments"
             element={<BeneficiaryPayment />}
           />
-          <Route path="*" element={<Error />} />
+          <Route path="/*" element={<Error />} />
         </Route>
       </Routes>
     </Router>
@@ -80,7 +82,7 @@ function WithSidebar() {
               path="/beneficiaries/payments"
               element={<BeneficiaryPayment />}
             />
-            <Route path="*" element={<Error />} />
+            <Route path="/*" element={<Error />} />
           </Routes>
         </div>
       </div>
