@@ -77,7 +77,7 @@ const ShowSidebar = () => {
       </div>
 
       {showSidebar && (
-        <div className="md:hidden bg-[#1C065A] w-[49%] sm:w-[32%]  text-white fixed top-0 left-0 bottom-0 z-40">
+        <div className="sidebar md:hidden bg-[#1C065A] w-[49%] sm:w-[32%] text-white fixed top-0 left-0 bottom-0 z-40   transition-all duration-300 ease-in-out">
           <div className="py-6 flex justify-center items-center space-x-2">
             <img src={chevron} alt="logo" className="w-10 h-10 rounded-sm" />
             <p className="font-semibold text-[16px] leading-[24px]">
