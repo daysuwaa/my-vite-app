@@ -19,7 +19,6 @@ const Details = () => {
     name,
     email,
     total_paid,
-    monthly_salary,
     date
   ) => {
     return (
@@ -53,7 +52,7 @@ const Details = () => {
         </Link>
 
         {/* chevron salaries */}
-        <div className="lg:grid grid-cols-3">
+        <div>
           <div className="hidden md:block col-span-2 bg-white lg:mx-7 md:mx-3">
             {/* first column */}
             <div className="flex mx-7 pt-6">
@@ -218,7 +217,7 @@ const Details = () => {
             </div>
           </div>
 
-          <div className="cols-span-1">
+          <div className="cols-span-1 mt-4">
             <div className="flex items-center mt-5 lg:mt-0 mx-3 md:mx-7">
               <svg
                 width="40"
@@ -227,7 +226,7 @@ const Details = () => {
                 fill="none"
                 xmlns="http://www.w3.org/2000/svg"
               >
-                <g id="user 1" clipPpath="url(#clip0_511_22106)">
+                <g id="user 1" clipPath="url(#clip0_511_22106)">
                   <g id="Group">
                     <g id="Group_2">
                       <g id="Group_3">
@@ -280,7 +279,7 @@ const Details = () => {
               </h1>
 
               <Link
-                to="*"
+                to="/payment/recents"
                 className="underline ml-auto text-[12px] text-[#4A5568]"
               >
                 View all
@@ -312,7 +311,7 @@ const Details = () => {
             <div className="grid-cols-2 grid-rows-6 mx-3 md:mx-7 pb-7 lg:pb-0">
               <div className="flex mt-5">
                 <p className="text-[#1C065A] text-[14px] font-[600] ">
-                  {monthly_salary}
+                  650,000.00
                 </p>
                 <p className="ml-auto text-[#718096] text-[14px] font-[300]">
                   {date}
@@ -323,7 +322,7 @@ const Details = () => {
               </p>
               <div className="flex mt-5">
                 <p className="text-[#1C065A] text-[14px] font-[600] ">
-                  {monthly_salary}
+                  650,000.00
                 </p>
                 <p className="ml-auto text-[#718096] text-[14px] font-[300]">
                   {date}
@@ -334,7 +333,7 @@ const Details = () => {
               </p>
               <div className="flex mt-5">
                 <p className="text-[#1C065A] text-[14px] font-[600] ">
-                  {monthly_salary}
+                  650,000.00
                 </p>
                 <p className="ml-auto text-[#718096] text-[14px] font-[300]">
                   {date}
@@ -345,7 +344,7 @@ const Details = () => {
               </p>
               <div className="flex mt-5">
                 <p className="text-[#1C065A] text-[14px] font-[600] ">
-                  {monthly_salary}
+                  650,000.00
                 </p>
                 <p className="ml-auto text-[#718096] text-[14px] font-[300]">
                   {date}
@@ -356,7 +355,7 @@ const Details = () => {
               </p>
               <div className="flex mt-5">
                 <p className="text-[#1C065A] text-[14px] font-[600] ">
-                  {monthly_salary}
+                  650,000.00
                 </p>
                 <p className="ml-auto text-[#718096] text-[14px] font-[300]">
                   {date}
@@ -367,7 +366,7 @@ const Details = () => {
               </p>
               <div className="flex mt-5">
                 <p className="text-[#1C065A] text-[14px] font-[600] ">
-                  {monthly_salary}
+                  650,000.00
                 </p>
                 <p className="ml-auto text-[#718096] text-[14px] font-[300]">
                   {date}
@@ -403,7 +402,6 @@ const Details = () => {
         "Segun Adebayo",
         "segun.ade@gmail.com",
         "12,430,900.00",
-        "650,000.00",
         "12th August, 2023."
       )}
       {/* end of the first column */}
