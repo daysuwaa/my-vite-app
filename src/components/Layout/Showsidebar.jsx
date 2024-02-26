@@ -58,9 +58,9 @@ const ShowSidebar = () => {
 
   return (
     <>
-      <div className="md:hidden top-0 left-0 fixed m-4 z-50">
+      <div className="md:hidden fixed  top-0 left-0  m-4 z-50">
         {showSidebar ? (
-          <div className="fixed top-0 left-[49%] sm:left-[32%]  border-2 border-black transform -translate-x-1/2 m-4 z-50">
+          <div className="fixed  top-0 left-[49%] sm:left-[32%]  transform -translate-x-1/2 m-4 z-50">
             <IoMdClose
               className="text-black cursor-pointer"
               size={24}
@@ -69,7 +69,7 @@ const ShowSidebar = () => {
           </div>
         ) : (
           <IoMenuOutline
-            className="text-black cursor-pointer"
+            className="text-black  cursor-pointer"
             size={24}
             onClick={toggleSidebar}
           />
@@ -77,7 +77,7 @@ const ShowSidebar = () => {
       </div>
 
       {showSidebar && (
-        <div className="sidebar md:hidden bg-[#1C065A] w-[49%] sm:w-[32%] text-white fixed top-0 left-0 bottom-0 z-40   transition-all duration-300 ease-in-out">
+        <div className=" md:hidden bg-[#1C065A] w-[49%] sm:w-[32%] text-white fixed top-0 left-0 bottom-0 z-40   transition-all duration-300 ease-in-out">
           <div className="py-6 flex justify-center items-center space-x-2">
             <img src={chevron} alt="logo" className="w-10 h-10 rounded-sm" />
             <p className="font-semibold text-[16px] leading-[24px]">
