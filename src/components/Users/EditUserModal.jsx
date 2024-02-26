@@ -1,6 +1,27 @@
 import React, { useState } from "react";
 
 const EditUserModal = ({ isEditModalOpen, closeEditModal }) => {
+  const edituserinput = (text, value, setValue, placeholder, id) => {
+    return (
+      <div className="my-6">
+        <form>
+          <label html="full-name" className="text-[#4A5568] text-sm ">
+            {text}
+          </label>
+          <div className="px-[10px] items-center py-2 mt-2 flex rounded border border-[#CBD5E0] focus-within:outline outline-2 outline-blue-600">
+            <input
+              type="text"
+              value={value}
+              onChange={(e) => setValue(e.target.value)}
+              placeholder={placeholder}
+              id={id}
+              className="font-normal w-[320px]  outline-none text-[#718096] text-[16px]"
+            />
+          </div>
+        </form>
+      </div>
+    );
+  };
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
@@ -10,7 +31,7 @@ const EditUserModal = ({ isEditModalOpen, closeEditModal }) => {
   };
   return (
     isEditModalOpen && (
-      <div className="fixed top-0 ring left-0 w-full h-full bg-black bg-opacity-50 flex justify-center items-center">
+      <div className="fixed top-0  left-0 w-full h-full bg-black bg-opacity-50 flex justify-center items-center">
         <div className="bg-white p-6 rounded w-[20rem] lg:w-[43rem] md:w-[30rem]">
           <div className="flex justify-center">
             <p className="mx-auto text-md font-semibold  text-[#4A5568]">
@@ -41,64 +62,38 @@ const EditUserModal = ({ isEditModalOpen, closeEditModal }) => {
           </div>
           {/* lineee */}
           <hr className="h-[2px] border-b mt-1 bg-[#CBD5E0]"></hr>
-          <div className="my-6">
-            <form>
-              <label html="firstname" className="text-[#4A5568] text-sm ">
-                Full Name
-              </label>
-              <div className="px-[10px] items-center h-[40px] mt-2 flex rounded border border-[#CBD5E0] focus-within:outline outline-2 outline-blue-600">
-                <input
-                  type="text"
-                  value={name}
-                  onChange={(e) => setName(e.target.value)}
-                  placeholder="Babawale John"
-                  id="firstname"
-                  className="font-normal w-full   outline-none text-[#718096] text-[16px]"
-                />
-              </div>
-            </form>
-          </div>
+          {/* #full name */}
+
+          {edituserinput(
+            "Full Name",
+            name,
+            setName,
+            "John Babawale",
+            "fullnamee1"
+          )}
+
           {/* #2 email adress */}
-          <div className="my-6">
-            <form>
-              <label htmlFor="emailaddress" className="text-[#4A5568] text-sm ">
-                Email Address
-              </label>
-              <div className="px-[10px] items-center h-[40px] mt-2 flex  rounded border border-[#CBD5E0] focus-within:outline outline-2 outline-blue-600">
-                <input
-                  type="email"
-                  value={email}
-                  onChange={(e) => setEmail(e.target.value)}
-                  placeholder="jbabawalae@chevronco.com"
-                  id="emailaddress"
-                  className="font-normal w-full text-[#4A5568] text-[16px] outline-none"
-                />
-              </div>
-            </form>
-          </div>
+          {edituserinput(
+            "Email Address",
+            email,
+            setEmail,
+            "john@babawale.com",
+            "emaill-a"
+          )}
+
           {/* #3 password */}
-          <div className="my-6">
-            <form>
-              <label htmlFor="passworduser" className="text-[#4A5568] text-sm ">
-                Password
-              </label>
-              <div className="px-[10px] items-center h-[40px] mt-2 flex  rounded border border-[#CBD5E0] focus-within:outline outline-2 outline-blue-600">
-                <input
-                  type="password"
-                  value={password}
-                  onChange={(e) => setPassword(e.target.value)}
-                  placeholder="****************"
-                  id="passworduser"
-                  className="font-normal w-full outline-none text-[#718096] text-[16px]"
-                />
-              </div>
-            </form>
-          </div>
+          {edituserinput(
+            "Password",
+            password,
+            setPassword,
+            "*************",
+            "pass-wordy"
+          )}
+
           {/* role */}
           <div className="my-6">
             <form>
               <label className="flex text-[#4A5568] text-sm">Role</label>
-
               <div className="px-[0px] items-center h-[40px] flex mt-2  rounded border border-[#CBD5E0] focus-within:outline outline-2 outline-blue-600">
                 <select
                   value={role}

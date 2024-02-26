@@ -3,7 +3,29 @@ import Navbar from "../Layout/Navbar";
 import User from "./User";
 import Modal from "react-modal";
 
-const Users = () => {
+const AddUsers = () => {
+  const addusertextinput = (text, value, setValue, placeholder, id) => {
+    return (
+      <div className="my-6">
+        <form>
+          <label html="full-name" className="text-[#4A5568] text-sm ">
+            {text}
+
+            <div className="px-[10px] items-center py-2 mt-2 flex rounded border border-[#CBD5E0] focus-within:outline outline-2 outline-blue-600">
+              <input
+                type="text"
+                value={value}
+                onChange={(e) => setValue(e.target.value)}
+                placeholder={placeholder}
+                id={id}
+                className="font-normal w-[320px]  outline-none text-[#718096] text-[16px]"
+              />
+            </div>
+          </label>
+        </form>
+      </div>
+    );
+  };
   const CustomModal = ({ isOpen, handleClose }) => {
     const [name, setName] = useState("");
     const [email, setEmail] = useState("");
@@ -18,7 +40,7 @@ const Users = () => {
         isOpen={isOpen}
         onRequestClose={handleClose}
         shouldCloseOnOverlayClick={false}
-        className="absolute rounded top-1/2 left-[43%] md:left-1/2 w-[350px] md:w-[640px] transform -translate-x-1/2 bg-white -translate-y-1/2 p-[2rem] m-[2rem]"
+        className="absolute rounded top-1/2 left-[42%] md:left-1/2 w-[350px] sm:w-[500px] md:w-[640px] transform -translate-x-1/2 bg-white -translate-y-1/2 p-[2rem] m-[2rem]"
         overlayClassName="fixed inset-0 bg-black bg-opacity-50"
       >
         <div className="flex justify-between items-center ">
@@ -52,59 +74,32 @@ const Users = () => {
         {/* the formsss */}
         {/* #full name */}
 
-        <div className="my-6">
-          <form>
-            <label html="full-name" className="text-[#4A5568] text-sm ">
-              Full Name
-            </label>
-            <div className="px-[10px] items-center h-[40px] mt-2 flex rounded border border-[#CBD5E0] focus-within:outline outline-2 outline-blue-600">
-              <input
-                type="text"
-                value={name}
-                onChange={(e) => setName(e.target.value)}
-                placeholder="Enter Full Name"
-                id="full-name"
-                className="font-normal w-[320px]  outline-none text-[#718096] text-[16px]"
-              />
-            </div>
-          </form>
-        </div>
+        {addusertextinput(
+          "Full Name",
+          name,
+          setName,
+          "Enter Your Full Name",
+          "full-name"
+        )}
+
         {/* #2 email adress */}
-        <div className="my-6">
-          <form>
-            <label htmlFor="email-add" className="text-[#4A5568] text-sm ">
-              Email Address
-            </label>
-            <div className="px-[10px] items-center h-[40px] mt-2 flex  rounded border border-[#CBD5E0] focus-within:outline outline-2 outline-blue-600">
-              <input
-                type="email"
-                value={email}
-                onChange={(e) => setEmail(e.target.value)}
-                placeholder="Enter Email Address"
-                id="email-add"
-                className="font-normal w-[320px] text-[#718096] text-[16px] outline-none text-lg"
-              />
-            </div>
-          </form>
-        </div>
+        {addusertextinput(
+          "Email Address",
+          email,
+          setEmail,
+          "Enter Your Email Address",
+          "emailll"
+        )}
+
         {/* #3 password */}
-        <div className="my-6">
-          <form>
-            <label htmlFor="password-add" className="text-[#4A5568] text-sm ">
-              Password
-            </label>
-            <div className="px-[10px] items-center h-[40px] mt-2 flex  rounded border border-[#CBD5E0] focus-within:outline outline-2 outline-blue-600">
-              <input
-                type="password"
-                value={password}
-                onChange={(e) => setPassword(e.target.value)}
-                placeholder="Enter Password"
-                id="password-add"
-                className="font-normal w-[320px]  outline-none text-[#718096] text-[16px]"
-              />
-            </div>
-          </form>
-        </div>
+        {addusertextinput(
+          "Password",
+          password,
+          setPassword,
+          "Enter Your Password",
+          "pass-word"
+        )}
+
         {/* role */}
         <div className="my-6">
           <form>
@@ -137,11 +132,9 @@ const Users = () => {
     );
   };
   const [isModalOpen, setIsModalOpen] = useState(false);
-
   const openModal = () => {
     setIsModalOpen(true);
   };
-
   const closeModal = () => {
     setIsModalOpen(false);
   };
@@ -165,4 +158,4 @@ const Users = () => {
   );
 };
 
-export default Users;
+export default AddUsers;
