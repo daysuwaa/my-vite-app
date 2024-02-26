@@ -23,6 +23,7 @@ import Beneficiarytable from "./components/Beneficiary/Beneficiary_Table";
 import BeneficiaryPayment from "./components/Beneficiary/Beneficiarypayment";
 import Scheduledetails from "./components/Schedule/Scheduledetails";
 import Login from "./components/Layout/Login";
+import RecentsPayment from "./components/Payment/RecentsPayment";
 
 function App() {
   return (
@@ -67,6 +68,7 @@ function WithSidebar() {
           <Routes>
             <Route path="/dashboard" element={<Dashboard />} />
             <Route path="/payment" element={<Payment />} />
+            <Route path="/payment/recents" element={<RecentsPayment />} />
             <Route path="/schedules" element={<Schedules />} />
             <Route path="/beneficiaries" element={<Beneficiaries />} />
             <Route path="/approvals" element={<Approvals />} />
