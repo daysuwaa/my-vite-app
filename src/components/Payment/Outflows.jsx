@@ -18,27 +18,15 @@ const Outflows = () => {
     },
     {
       name: <div className="font-bold text-[#4A5568]">AMOUNT</div>,
-      selector: (row) => (
-        <Link to="/payment/details">
-          <div className="text-[#1C065A]">{row.amount}</div>
-        </Link>
-      ),
+      selector: (row) => <div className="text-[#1C065A]">{row.amount}</div>,
     },
     {
       name: <div className="font-bold text-[#4A5568]">SENDER</div>,
-      selector: (row) => (
-        <Link to="/payment/details">
-          <div className="text-[#1C065A]"> {row.sender}</div>
-        </Link>
-      ),
+      selector: (row) => <div className="text-[#1C065A]"> {row.sender}</div>,
     },
     {
       name: <div className="font-bold text-[#4A5568]">PAID FROM</div>,
-      selector: (row) => (
-        <Link to="/payment/details">
-          <div className="text-[#1C065A]"> {row.paidfrom}</div>
-        </Link>
-      ),
+      selector: (row) => <div className="text-[#1C065A]"> {row.paidfrom}</div>,
     },
     {
       name: <div className="font-bold text-[#4A5568]">STATUS</div>,
@@ -72,11 +60,7 @@ const Outflows = () => {
 
     {
       name: <div className="font-bold text-[#4A5568]">DATE</div>,
-      selector: (row) => (
-        <Link to="/payment/details">
-          <div className="text-[#1C065A]"> {row.date}</div>
-        </Link>
-      ),
+      selector: (row) => <div className="text-[#1C065A]"> {row.date}</div>,
     },
   ];
 
