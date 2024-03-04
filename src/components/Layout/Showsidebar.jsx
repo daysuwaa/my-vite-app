@@ -7,7 +7,7 @@ import users from "../../assets/FiUsers.svg";
 import beneficiary from "../../assets/IoWalletOutline.svg";
 import schedules from "../../assets/BsClock-2.svg";
 import settings from "../../assets/BsGear.svg";
-import chevron from "../../assets/chevron logo.png";
+import chevron from "src/assets/logo.png";
 import { IoMenuOutline } from "react-icons/io5";
 import { IoMdClose } from "react-icons/io";
 import { Link, useLocation } from "react-router-dom";
@@ -29,20 +29,16 @@ const ShowSidebar = () => {
       <Link to={link} className="grid">
         <div className=" items-center mx-1 space-x-12 ">
           <div
-            className={`flex px-3 w-full md:w-[226px] h-[44px]  `}
+            className="flex px-3 w-full md:w-[226px] h-[44px]"
             style={{
               borderRadius: isActive ? "4px" : "",
               border: isActive
                 ? "1px solid rgba(255, 255, 255, 0.22)"
                 : "1px solid rgba(255, 255, 255, 0)",
-              background: isActive ? "#42257E" : "",
+              background: isActive ? "#42257E" : ""
             }}
           >
-            <img
-              src={imgSrc}
-              alt="icon"
-              className="w-[18px] h-[18px] mt-3 mx-auto"
-            />
+            <img src={imgSrc} alt="icon" className="w-[18px] h-[18px] mt-3 mx-auto" />
             <p
               className={`flex-1 text-white tracking-wider text-sm leading-6 px-3  mt-2  md:block ${
                 isActive ? "font-bold" : "font-light"
@@ -61,18 +57,10 @@ const ShowSidebar = () => {
       <div className="md:hidden fixed  top-0 left-0  m-4 z-50">
         {showSidebar ? (
           <div className="fixed  top-0 left-[49%] sm:left-[32%]  transform -translate-x-1/2 m-4 z-50">
-            <IoMdClose
-              className="text-black cursor-pointer"
-              size={24}
-              onClick={toggleSidebar}
-            />
+            <IoMdClose className="text-black cursor-pointer" size={24} onClick={toggleSidebar} />
           </div>
         ) : (
-          <IoMenuOutline
-            className="text-black  cursor-pointer"
-            size={24}
-            onClick={toggleSidebar}
-          />
+          <IoMenuOutline className="text-black  cursor-pointer" size={24} onClick={toggleSidebar} />
         )}
       </div>
 
@@ -80,9 +68,7 @@ const ShowSidebar = () => {
         <div className=" md:hidden bg-[#1C065A] w-[49%] sm:w-[32%] text-white fixed top-0 left-0 bottom-0 z-40   transition-all duration-300 ease-in-out">
           <div className="py-6 flex justify-center items-center space-x-2">
             <img src={chevron} alt="logo" className="w-10 h-10 rounded-sm" />
-            <p className="font-semibold text-[16px] leading-[24px]">
-              Chevron Group
-            </p>
+            <p className="font-semibold text-[16px] leading-[24px]">Chevron Group</p>
           </div>
 
           <hr className="border-gray-600" />
