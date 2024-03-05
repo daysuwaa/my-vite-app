@@ -1,0 +1,16 @@
+const config = {
+  TOKEN: "__ACCESS_TOKEN__",
+  REFRESH_TOKEN: "__REFRESH_TOKEN__",
+  BASE_URL: import.meta.env.VITE_BASE_URL,
+  ENVIRONMENT: import.meta.env.VITE_NODE_ENV,
+  LOGIN_REGISTER_ROUTE: "%%login&&Register%%",
+  PUBLIC_CHECKOUT_URL: import.meta.env.VITE_PUBLIC_CHECKOUT_URL,
+  TIME_OUT: Number(import.meta.env.VITE_IDLE_TIME),
+  DASHBOARD_ENVIRONMENT: import.meta.env.VITE_DASHBOARD_ENVIRONMENT,
+  LANDING_PAGE_BASE_URL: import.meta.env.VITE_LANDING_PAGE_BASE_URL,
+  X_ENV_AUTH: import.meta.env.VITE_X_ENV_AUTH,
+  PAYOUT_HOUR: import.meta.env.VITE_PAYOUT_HOUR,
+  DISABLED_MERCHANT_ALLOWED_ROUTES: import.meta.env.VITE_DISABLED_MERCHANT_ALLOWED_ROUTES
+};
+
+export default config;

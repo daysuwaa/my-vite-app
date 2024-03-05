@@ -1,5 +1,5 @@
 import React from "react";
-import chevron from "/src/assets/chevron logo.png";
+import chevron from "src/assets/logo.png";
 import dashboard from "/src/assets/IoSpeedometerOutline.svg";
 import approvals from "/src/assets/FiCheckCircle.svg";
 import payments from "/src/assets/FiCreditCard.svg";
@@ -9,12 +9,12 @@ import beneficiary from "/src/assets/IoWalletOutline.svg";
 import schedules from "/src/assets/BsClock-2.svg";
 import settings from "/src/assets/BsGear.svg";
 import { Link, useLocation } from "react-router-dom";
+import { useUserDetails } from "src/api/queries/auth";
 
-function startsWithSubstring(string, substring) {
-  return string.startsWith(substring);
-}
+const startsWithSubstring = (string, substring) => string.startsWith(substring);
 
 const Sidebar = () => {
+  const { user } = useUserDetails();
   const locationObj = useLocation();
   const activeLink = locationObj.pathname;
 
@@ -25,20 +25,16 @@ const Sidebar = () => {
       <Link to={link} className="grid">
         <div className=" items-center space-x-12 ">
           <div
-            className={`flex px-3 w-full md:w-[226px] h-[44px]  `}
+            className="flex px-3 w-full md:w-[226px] h-[44px]"
             style={{
               borderRadius: isActive ? "4px" : "",
               border: isActive
                 ? "1px solid rgba(255, 255, 255, 0.22)"
                 : "1px solid rgba(255, 255, 255, 0)",
-              background: isActive ? "#42257E" : "",
+              background: isActive ? "#42257E" : ""
             }}
           >
-            <img
-              src={imgSrc}
-              alt="icon"
-              className="w-[18px] h-[18px] mt-3 mx-auto"
-            />
+            <img src={imgSrc} alt="icon" className="w-[18px] h-[18px] mt-3 mx-auto" />
             <p
               className={`flex-1 text-white tracking-wider text-sm leading-6 px-3  mt-2  md:block ${
                 isActive ? "font-bold" : "font-light"
@@ -54,14 +50,14 @@ const Sidebar = () => {
 
   return (
     <div className="h-full md:w-[250px] w-[40%] px-3 py-4 bg-[#1C065A] hidden md:block">
-      <div className="flex justify-center items-center space-x-2 py-6 ">
+      <div className="flex items-center gap-2 px-3 py-6">
         <img className="w-10 h-10 rounded-sm" src={chevron} alt="logo" />
-        <p className="text-white font-semibold tracking-wider hidden md:block text-[16px] leading-[24px] ">
-          Chevron Group
+        <p className="text-white font-semibold tracking-wider hidden md:block text-[16px] leading-[24px] truncate">
+          {user?.user?.business_name}
         </p>
       </div>
 
-      <hr className="hidden md:block "></hr>
+      <hr className="hidden md:block opacity-30"></hr>
 
       <div className="pt-7 ">
         {renderLink("/dashboard", "Dashboard", dashboard)}

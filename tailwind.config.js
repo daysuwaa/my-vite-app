@@ -4,9 +4,14 @@ module.exports = {
   theme: {
     extend: {
       fontFamily: {
-        inter: ["Inter", "sans-serif"],
+        inter: ["Inter", "sans-serif"]
       },
-    },
+      colors: {
+        primary: "#1C065A",
+        secondary: "#37A169",
+        accent1: "#824CFC"
+      }
+    }
   },
-  plugins: [],
+  plugins: []
 };
